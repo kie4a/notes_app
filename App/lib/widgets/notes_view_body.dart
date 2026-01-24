@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qq/widgets/custom_app_bar.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class NotesViewBody extends StatelessWidget {
   const NotesViewBody({super.key});
 
@@ -8,13 +8,7 @@ class NotesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-      children: const [
-        SizedBox(height: 50,),
-        CustomAppbar()
-        ],
-      
-      ),
+      child: Column(children: const [SizedBox(height: 50), CustomAppbar()]),
     );
   }
 }
