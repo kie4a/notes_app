@@ -76,7 +76,7 @@ flutter:
   fonts:
     - family: Poppins
       fonts:
-        - asset: App/assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Regular.ttf
        
           style: italic
     
