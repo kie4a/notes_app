@@ -11,10 +11,10 @@ class NotesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // لإخفاء شريط Debug من الزاوية
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark, // تفعيل الوضع الليلي لكل التطبيق
-        fontFamily: "Poppins", // التأكد من نوع الخط
+        brightness: Brightness.dark, 
+        fontFamily: "Poppins", 
       ),
       home: const NotesViews(),
     );
