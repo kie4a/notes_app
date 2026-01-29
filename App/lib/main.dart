@@ -11,6 +11,7 @@ class NotesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      
       debugShowCheckedModeBanner: false, // لإخفاء شريط Debug من الزاوية
       theme: ThemeData(
         brightness: Brightness.dark, // تفعيل الوضع الليلي لكل التطبيق
