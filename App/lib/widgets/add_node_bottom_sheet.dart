@@ -18,12 +18,12 @@ class AddNoteBottomSheet extends StatelessWidget {
               print("filied ${state.errMessage}");
             }
             if (state is AddNoteSuccess) {
-              Navigator.pop(context);
+               Navigator.pop(context);
             }
           },
           builder: (context, state) {
             return ModalProgressHUD(
-              inAsyncCall: state is AddNoteLoding ? true : false,
+              inAsyncCall: state is AddNoteLoading ? true : false,
               child: AddNoteForm(),
             );
           },
