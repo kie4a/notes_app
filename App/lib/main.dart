@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:qq/constants.dart';
-import 'package:qq/cubits/add_note_cubit.dart/cubit/add_note_cubit.dart';
 import 'package:qq/models/note_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart'; // <--- أضف هذا السطر
 import 'package:qq/simple_bloc_observer.dart';
