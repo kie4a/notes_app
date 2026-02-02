@@ -32,7 +32,11 @@ class NoteItem extends StatelessWidget {
             ListTile(
               title: Text(
                 note.title,
-                style:const TextStyle(color: Colors.black, fontSize: 26,fontWeight: FontWeight.w500,),
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 26,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
               subtitle: Padding(
                 padding: const EdgeInsets.only(top: 16, bottom: 16),
@@ -45,7 +49,9 @@ class NoteItem extends StatelessWidget {
                 ),
               ),
               trailing: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  note.delete();
+                },
                 icon: Icon(
                   FontAwesomeIcons.trash,
                   color: Colors.black.withOpacity(0.4),
@@ -53,13 +59,13 @@ class NoteItem extends StatelessWidget {
               ),
             ),
 
-           Padding(
+            Padding(
               padding: const EdgeInsets.only(right: 24),
               child: Text(
                 note.date,
                 style: TextStyle(
-                  color: Colors.black.withOpacity(0.4), 
-                  fontSize: 18, 
+                  color: Colors.black.withOpacity(0.4),
+                  fontSize: 18,
                 ),
               ),
             ),
