@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qq/cubits/add_note_cubit.dart/cubit/add_note_cubit.dart';
+import 'package:qq/cubits/cubit/notes_cubit.dart';
 import 'package:qq/widgets/add_note_form.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {
-    AddNoteBottomSheet({super.key});
+  AddNoteBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,24 +17,22 @@ class AddNoteBottomSheet extends StatelessWidget {
             print("filied ${state.errMessage}");
           }
           if (state is AddNoteSuccess) {
+            BlocProvider.of<NotesCubit>(context).fetchAllNotes();
             Navigator.pop(context);
           }
         },
         builder: (context, state) {
           return AbsorbPointer(
-            absorbing: state is AddNoteLoading ?true:false,
+            absorbing: state is AddNoteLoading ? true : false,
             child: Padding(
-              padding: EdgeInsets.only(left: 16
-              ,right: 16
-              ,top: 16,
-              bottom: MediaQuery.of(context).viewInsets.bottom
-              
+              padding: EdgeInsets.only(
+                left: 16,
+                right: 16,
+                top: 16,
+                bottom: MediaQuery.of(context).viewInsets.bottom,
               ),
-              
-              child: const SingleChildScrollView(child: 
-              AddNoteForm(),
-              
-              ),
+
+              child: const SingleChildScrollView(child: AddNoteForm()),
             ),
           );
         },
