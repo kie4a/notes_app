@@ -3,7 +3,7 @@ import 'package:hive_flutter/adapters.dart';
 import 'package:qq/constants.dart';
 import 'package:qq/cubits/cubit/notes_cubit.dart';
 import 'package:qq/models/note_model.dart';
-import 'package:flutter_bloc/flutter_bloc.dart'; // <--- أضف هذا السطر
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qq/simple_bloc_observer.dart';
 import 'package:qq/views/notes_views.dart';
 
