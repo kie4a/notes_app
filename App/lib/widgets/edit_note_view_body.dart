@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:qq/constants.dart';
+import 'package:qq/cubits/add_note_cubit.dart/cubit/add_note_cubit.dart';
 import 'package:qq/cubits/cubit/notes_cubit.dart';
 import 'package:qq/models/note_model.dart';
+import 'package:qq/widgets/colors_list_view.dart';
 import 'package:qq/widgets/custom_app_bar.dart';
 import 'package:qq/widgets/custom_text_filed.dart';
+import 'package:qq/widgets/edit_note_colors_list_view.dart';
 
 class EditNoteViewBody extends StatefulWidget {
   const EditNoteViewBody({super.key, required this.note});
@@ -31,6 +35,7 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               widget.note.subTitle = content ?? widget.note.subTitle;
               widget.note.save();
               BlocProvider.of<NotesCubit>(context).fetchAllNotes();
+              Navigator.of(context).pop();
             },
           ),
           const SizedBox(height: 50),
@@ -48,6 +53,8 @@ class _EditNoteViewBodyState extends State<EditNoteViewBody> {
               content = value;
             },
           ),
+          SizedBox(height: 16),
+          EditNoteColorList(note: widget.note),
         ],
       ),
     );
